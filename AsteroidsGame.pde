@@ -1,5 +1,5 @@
-Star[] nightSky=new Star[200];
-Spaceship bob = new Spaceship();
+private Star[] nightSky=new Star[200];
+private Spaceship bob = new Spaceship();
 public void setup() 
 {
  size(500,500);
@@ -15,4 +15,19 @@ public void draw()
   }
   strokeWeight(1);
   bob.show();
+  bob.move();
+}
+public void keyPressed(){
+  if(key=='h'){
+    bob.HyperSpace();
+  }
+  if(key=='w'){
+    bob.accelerate(4.0);
+  }
+  if(key=='d'){
+    bob.turn(-20);
+  }
+  if(key=='a'){
+    bob.turn(20);
+  }
 }
